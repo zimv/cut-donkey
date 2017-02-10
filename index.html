@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html class="full-screen">
+<head>
+<meta charset="UTF-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+<meta http-equiv="Cache-Control" content="no-transform " />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>倔强的驴-子慕大诗人</title>
+<link href="src/css/main.css" rel="stylesheet">
+
+<script src="src/js/common/zepto.min.js"></script>
+<script src="src/js/resize.js"></script>
+
+</head>
+<body class="full-screen">
+    
+
+    <div class="loading">
+        <div class="spinner">
+            <div class="spinner-container container1">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container2">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+        </div>
+        <div class="text">加载中...</div>
+    </div>
+
+    <img src="src/img/logo.png" class="logo">
+
+    <div class="page-container full-screen" id="page-1">
+        <img src="src/img/juelv.png" class="juelv block-center">
+        <img src="src/img/game-name.png" class="game-name block-center">
+        <img src="src/img/start.png" class="start block-center">
+        <img src="src/img/guide.png" class="guide block-center">
+    </div>
+
+    <div class="page-container full-screen hide" id="page-2">
+        <img src="src/img/title-2.png" class="title-2 block-center">
+        <img src="src/img/donkey-light.png" class="donkey-light block-center">
+		<img src="src/img/hand.png" class="hand block-center">
+        <div class="ready">
+            <div class="con">
+                <p>3</p>
+                <p>2</p>
+                <p>1</p>
+                <p>start!</p>
+            </div>
+        </div>
+    </div>
+
+	<div class="page-container full-screen hide" id="page-3">
+        <img src="src/img/title-3.png" class="title-3 block-center">
+		<img src="src/img/donkey.png" class="donkey block-center">
+        <div class="cut-region"></div>
+		<div class="time pic bg-pic">8s</div>
+        <div class="number"></div>
+        <img src="src/img/lian.png" class="lian hide block-center">
+        <img src="src/img/sword.png" class="sword block-center">
+    </div>
+
+	<div class="page-container full-screen hide" id="page-4">
+		<img src="src/img/title-4.png" class="title-4 block-center">
+        <img src="src/img/first.png" class="result block-center">
+		<img src="src/img/eat.png" class="eat block-center">
+		<img src="src/img/btn_share.png" class="share block-center">
+        <img src="src/img/share-1.png" class="share-text block-center">
+		<img src="src/img/again.png" class="again block-center">
+        <div class="number number-2"></div>
+    </div>
+
+	<div class="overlay hide" id="overlay-guide">
+        <img src="src/img/guide-con.png" class="guide-con block-center">
+        <div class="close-btn"></div>
+        <img src="src/img/come.png" class="guide-come block-center">
+    </div>
+
+     <div class="overlay hide" id="share">
+        <img src="src/img/share_tip.png" class="share-tip block-center">
+    </div>
+
+    <div class="team"><a href="http://mp.weixin.qq.com/s?__biz=MzAwNzUxNDcwNw==&mid=208542300&idx=1&sn=bba1e8ca6fc9ddabaa5bd70b5aca2167&key=c468684b929d2be2bb7bb431f9d78f12699ae803dcf9679325c6a6bc0faec8b7bec9f9728bd3ade3af4c200c9cbcda71&ascene=0&uin=MjEzNjA0NjkyMg%3D%3D&devicetype=iMac+MacBookPro11%2C1+OSX+OSX+10.10.2+src(14C109)&version=11020012&pass_ticket=shKjDtR%2F8jAGstTcloplNgYTmCPocO%2Fl6sLwHm5fXDBM%2FyWAJhYQW4oevAZr3rMQ">技术支持：&nbsp;宾果科技</a></div>
+
+    <!--预加载结果图片-->
+    <img src="src/img/first.png" class="hide">
+    <img src="src/img/second.png" class="hide">
+    <img src="src/img/third.png" class="hide">
+
+    <script src="src/js/common/fastclick.js"></script>
+    <script src="src/js/lvhuo.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+          FastClick.attach(document.body);
+        });
+    </script>
+
+    <script>
+        var shareData = [
+                            { 
+                                title : '千斩不屈，正寻美味',
+                                desc : '我在草莽剁主争霸中成为总剁主，恭迎各路英雄前来挑战。',
+                                link : "xxxxxxxx",
+                                imgUrl : "http://static.bingo2o.com/case/lvhuo/logo.png"
+                            },
+                            { 
+                                title : '千斩不屈，正寻美味',
+                                desc : '我在草莽剁主争霸中成为总钻风，恭迎各路英雄前来挑战。',
+                                link : "xxxxxxxxx",
+                                imgUrl : "http://static.bingo2o.com/case/lvhuo/logo.png"
+                            },
+                            { 
+                                title : '千斩不屈，正寻美味',
+                                desc : '我在草莽剁主争霸中成为小钻风，恭迎各路英雄前来挑战。',
+                                link : "xxxxxxxx",
+                                imgUrl : "http://static.bingo2o.com/case/lvhuo/logo.png"
+                            },
+                            { 
+                                title : '千斩不屈，正寻美味',
+                                desc : '我在草莽剁主争霸中成为软妹子，恭迎各路英雄前来挑战。',
+                                link : "xxxxxxxx",
+                                imgUrl : "http://static.bingo2o.com/case/lvhuo/logo.png"
+                            }
+                        ];
+        var discount;
+        window.setDiscount = function(dc){
+            discount = discount;
+        }
+    </script>
+</body>
+</html>
+
