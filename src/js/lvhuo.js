@@ -79,7 +79,7 @@ function Cut(){
 }
 
 Cut.prototype = {
-	time: 10,
+	time: 20,
 	$timeCon: $('.time'),
 	score: '',//得分
 	$scoreCon: $('.number'),
