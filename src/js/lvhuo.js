@@ -134,25 +134,21 @@ Cut.prototype = {
 			changeImg('.result',this.resultPic[0]);
 			changeImg('.share-text',this.resultPic2[0]);
 			setDiscount(5);
-			setWXShareData(shareData[0]);
 		} 
 		if(this.score >= 100 && this.score < 120) {
 			changeImg('.result',this.resultPic[1]);
 			changeImg('.share-text',this.resultPic2[1]);
 			setDiscount(6);
-			setWXShareData(shareData[1]);
 		}
 		if(this.score >= 80 && this.score < 100){
 			changeImg('.result',this.resultPic[2]);
 			changeImg('.share-text',this.resultPic2[2]);
 			setDiscount(7);
-			setWXShareData(shareData[2]);
 		} 
 		if(this.score < 80) {
 			changeImg('.result',this.resultPic[3]);
 			changeImg('.share-text',this.resultPic2[3]);
 			setDiscount(8);
-			setWXShareData(shareData[3]);
 		}
 		function changeImg(dom,src){
 			$(dom).attr('src', src);
@@ -182,10 +178,11 @@ Cut.prototype = {
 	},
 	cutCount: function(e){
 		var self = this;
-		if(e.targetTouches[0].clientX > self.$x[0] 
-			&& e.targetTouches[0].clientX < self.$x[1] 
-			&& e.targetTouches[0].clientY < self.$y[1] 
-			&& e.targetTouches[0].clientY > self.$y[0]){//在驴身上
+		var loca = e.targetTouches[0];
+		if(loca.clientX > self.$x[0] 
+			&& loca.clientX < self.$x[1] 
+			&& loca.clientY < self.$y[1] 
+			&& loca.clientY > self.$y[0]){//在驴身上
 
 				if(self.last[0] == 'in') return false;//上一次同样在里面，不执行
 
