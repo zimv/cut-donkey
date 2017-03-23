@@ -187,8 +187,6 @@ Cut.prototype = {
 				if(self.last[0] == 'in') return false;//上一次同样在里面，不执行
 
 				if(self.last[0] == 'out' && self.last[1] == 'in'){
-					self.last[1] = self.last[0];
-					self.last[0] = 'in';
 					return true;
 				}else{
 					self.last[1] = self.last[0];
@@ -201,8 +199,6 @@ Cut.prototype = {
 			if(self.last[0] == 'out') return false;//上一次在同样外面，不执行
 
 			if(self.last[0] == 'in' && self.last[1] == 'out'){
-				self.last[1] = self.last[0];
-				self.last[0] = 'out';
 				return true;
 			}else{
 				self.last[1] = self.last[0];
