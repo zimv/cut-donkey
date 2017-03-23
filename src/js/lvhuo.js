@@ -172,6 +172,7 @@ Cut.prototype = {
 			});
 				
 		}).on('touchend', function(){
+			self.last = ["",""];//重置
 			self.$donkey.removeClass('shake');
 			$region.off('touchmove');
 		});
